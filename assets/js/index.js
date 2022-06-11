@@ -1,11 +1,11 @@
-function getUserinfo() {
+function getUserInfo() {
   $.ajax({
     method: 'GET',
     url: '/my/userinfo',
     // headers: { authorization: localStorage.getItem('token') },
     success: (res) => {
       if (res.status !== 0) return layer.msg(res.message)
-      layer.msg(res.message)
+      // layer.msg(res.message)
       renderAvatar(res.data)
     },
   })
@@ -22,7 +22,7 @@ function renderAvatar(user) {
     $('.text-avatar').html(first).show()
   }
 }
-getUserinfo()
+getUserInfo()
 // 退出登录
 $('#btnLogout').click(() => {
     console.log(1);
