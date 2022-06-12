@@ -25,7 +25,7 @@ function renderAvatar(user) {
 getUserInfo()
 // 退出登录
 $('#btnLogout').click(() => {
-    console.log(1);
+  console.log(1)
   layer.confirm('确定退出登录？', { icon: 3, title: '' }, function (index) {
     // 清空本地存储里面的 token
     localStorage.removeItem('token')
@@ -33,3 +33,7 @@ $('#btnLogout').click(() => {
     location.href = '/login.html'
   })
 })
+
+function change() {
+  $('#change').addClass('layui-this').next().removeClass('layui-this')
+}
